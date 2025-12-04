@@ -52,4 +52,4 @@ Verify the plugin is loaded correctly:
 sudo libinput debug-events --enable-plugins --verbose
 ```
 
-Ensure the line `Acceleration Scroll modifier attached` appears in the output.
+Ensure the line `Applying custom scroll curve to generic mouse:` appears in the output.
