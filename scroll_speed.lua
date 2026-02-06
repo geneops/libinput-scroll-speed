@@ -72,6 +72,10 @@ function new_device(device)
         libinput:log_info("Applying custom scroll curve to generic mouse: " .. device:name())
         device:connect("evdev-frame", handle_frame)
     end
+    if props["ID_INPUT_TOUCHPAD"] then
+        libinput:log_info("Applying custom scroll curve to generic touchpad: " .. device:name())
+        device:connect("evdev-frame", handle_frame)
+    end
 end
 
 local version = libinput:register({1})
